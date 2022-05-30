@@ -4,7 +4,7 @@ import {Alert} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as gameTypesData from'../public/data/gameTypes.json'
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
     return({props: context.query})
     // will be passed to the page component as props
 }

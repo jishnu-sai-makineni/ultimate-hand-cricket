@@ -6,7 +6,7 @@ import * as gameTypesData from'../public/data/gameTypes.json'
 import * as fs from 'fs'
 import * as path from 'path'
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
     let games = JSON.parse(fs.readFileSync(path.join(process.cwd(), '/public/data/games.json'), {encoding: 'utf8', flag: 'r'}))
     if(games[context.query.id]){
         context.query['gameType'] = games[context.query.id]["type"]
