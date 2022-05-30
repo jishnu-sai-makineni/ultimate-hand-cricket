@@ -1,0 +1,85 @@
+.alert{
+    width: 60%
+}
+#input-tiles-div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    background-color: cornflowerblue;
+}
+
+.input-tile{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: #b9df51;
+}
+
+.input-tile:hover{
+    background-color: #f5f5f5;
+}
+
+#game-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    background-color: #f5f5f5;
+}
+
+/* score group should only occupy one line */
+#score-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    background-color: #f5f5f5;
+}
+
+.idNumberStyle{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+    width: 50px;
+}
+
+#copy{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+    width: 50px;
+    /* give it a glassy blue shade */
+    text-align: center;
+    width: 70px;
+    background-color: #96e3fa;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#copy:hover{
+    background-color: #aae2f3;
+}   
+
+#joinGameBtn{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+    width: 50px;
+    /* give it a glassy blue shade */
+    text-align: center;
+    width: 70px;
+    background-color: #36e995;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#joinGameBtn:hover{
+    background-color: #82ebba;
+}

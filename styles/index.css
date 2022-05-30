@@ -1,0 +1,9 @@
+.row{
+    height: 40%;
+  }
+
+.card{
+  height: 80%;
+  background: url('https://www.colorhexa.com/87ceeb.png') 0 0 no-repeat;
+  background-size: cover;
+}
