@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card, Col, Container, Row } from 'react-bootstrap';
+import Link from 'next/link';
 
 export async function getServerSideProps(context) {
   return({props: {query: context.query}})
