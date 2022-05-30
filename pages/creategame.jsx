@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Form, Button} from 'react-bootstrap'
 
-export default function creategame(props){
+export default function Creategame(props){
     function formSubmit(e){
         e.preventDefault()
         // a post request to /creategameapi

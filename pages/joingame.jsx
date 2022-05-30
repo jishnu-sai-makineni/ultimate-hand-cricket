@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 import {Form, Button} from 'react-bootstrap'
 
-export default function creategame(props){
+export default function Joingame(props){
 
     const [gameId, setGameId] = useState('')
 
