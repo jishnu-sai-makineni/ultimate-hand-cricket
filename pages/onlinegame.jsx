@@ -277,7 +277,7 @@ useEffect(() => {
 
             <img id="opponentImage" src={inningsStatus != "You are batting"?'cricket-bat.svg':'cricket-ball.svg'}></img>
             <div id="opponentUser" className="score-group">
-                <h1>Opponent's number:</h1>
+                <h1>Opponent{"'"}s number:</h1>
                 <h2 id="opponentUserNumber">{opponentUserNumber}</h2>
             </div>
         </div>
