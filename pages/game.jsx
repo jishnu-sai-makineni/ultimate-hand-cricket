@@ -4,7 +4,7 @@ import {Alert} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as gameTypesData from'../public/data/gameTypes.json'
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
     return({props: context.query})
     // will be passed to the page component as props
 }
@@ -232,7 +232,7 @@ let [alerts, setAlerts] = useState([])
 
             <img id="opponentImage" src={inningsStatus != "You are batting"?'cricket-bat.svg':'cricket-ball.svg'}></img>
             <div id="opponentUser" className="score-group">
-                <h1>Opponent's number:</h1>
+                <h1>Opponent{"'"}s number:</h1>
                 <h2 id="opponentUserNumber">{opponentUserNumber}</h2>
             </div>
         </div>
