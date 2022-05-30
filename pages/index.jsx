@@ -2,13 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card, Col, Container, Row } from 'react-bootstrap';
 import Link from 'next/link';
 
-export async function getServerSideProps(context) {
-  return({props: {query: context.query}})
-  // will be passed to the page component as props
-}
-
-
-export default function App(props){
+export default function App(){
     return(
       <Container>
       <Row>
