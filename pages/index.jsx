@@ -14,7 +14,7 @@ export default function App(props){
         <Col className="w-50">
           <Card>
             <Card.Img style={{width: "100%", height: "300px"}} src="https://www.colorhexa.com/42ffff.png" />
-            <a className='stretched-link' href='/?a=nyom'></a>
+            <Link className='stretched-link' href='/?a=nyom'></Link>
             <Card.ImgOverlay>
               <Card.Title>Matchmaking with randy</Card.Title>
             </Card.ImgOverlay>
@@ -23,7 +23,7 @@ export default function App(props){
         <Col className="w-50">
           <Card >
             <Card.Img style={{width: "100%", height: "300px"}} src="https://www.colorhexa.com/69facd.png" />
-              <a className='stretched-link' href='/joinGame'></a>
+              <Link className='stretched-link' href='/joinGame'></Link>
               <Card.ImgOverlay>
                 <Card.Title>Join a Game</Card.Title>
               </Card.ImgOverlay>
@@ -34,7 +34,7 @@ export default function App(props){
         <Col className="w-50">
           <Card >
             <Card.Img style={{width: "100%", height: "300px"}} src="https://www.colorhexa.com/27caeb.png" />
-            <a className='stretched-link' href='/createGame'></a>
+            <Link className='stretched-link' href='/createGame'></Link>
             <Card.ImgOverlay>
                 <Card.Title>Create a Game</Card.Title>
             </Card.ImgOverlay>
@@ -43,7 +43,7 @@ export default function App(props){
         <Col className="w-50">
           <Card >
             <Card.Img style={{width: "100%", height: "300px"}} src="https://www.colorhexa.com/82feeb.png" />
-            <a className='stretched-link' href='/?a=nyoooom'></a>
+            <Link className='stretched-link' href='/?a=nyoooom'></Link>
             <Card.ImgOverlay>
               <Card.Title>TO BE DECLARED</Card.Title>
             </Card.ImgOverlay>
