@@ -62,13 +62,13 @@ function joinGame(number){
     }
     else{
         createAlert("Please enter a valid ID Number", "warning")
-            .then(a => {})
-            .catch(a => {})
     }
 }
 
 function copyButton(){
-    navigator.clipboard.writeText(currentUrl);
+    navigator.clipboard.writeText(currentUrl)
+    .then(() => {})
+    .catch(() => {})
 }
 
 function resetGame(){
