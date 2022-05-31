@@ -43,6 +43,7 @@ export default function Creategame(props){
                     <option value="2">The Binary (Zero and One)</option>
                     <option value="3">The Risky Two (One and Six)</option>
                     <option value="4">The Popular Ten (One to Ten)</option>
+                    <option value="5">One n Two (One and Two)</option>
                 </Form.Select>
                 </Form.Group>
                 <Button type="submit">Submit</Button>
