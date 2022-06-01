@@ -65,10 +65,16 @@ function joinGame(number){
     }
 }
 
-function copyButton(){
-    navigator.clipboard.writeText(currentUrl)
-    .then(() => {})
-    .catch(() => {})
+function copyButton(e){
+    try{
+        document.getElementById('invite-link').select();
+        document.execCommand('copy');
+    }
+    catch{
+        navigator.clipboard.writeText(currentUrl)
+        .then(() => {})
+        .catch(() => {})
+    }
 }
 
 function resetGame(){
@@ -243,7 +249,7 @@ useEffect(() => {
   }
   return(
     <div>
-    <h1>Invite Link : <input value={currentUrl} readOnly/><button id="copy" onClick={copyButton}>Copy</button></h1>
+    <h1>Invite Link : <input id="invite-link" value={currentUrl} readOnly/><button id="copy" onClick={copyButton}>Copy</button></h1>
 
     {/* <button onClick={() => window.location.href = '/logout'} className="btn btn-danger" style={{position: "fixed", right: "15px", top: "15px"}}>Logout</button> */}
 
