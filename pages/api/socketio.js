@@ -224,6 +224,11 @@ const ioHandler = (req, res) => {
                       match.innings = 2;
                     }
                     else{
+                        if(parseInt(match.currentScore) === parseInt(match.targetScore)-1){
+                          win(match, "draw")
+                          socket.emit('playTurn', {status: "successToSender", numberGiven: number});
+                          return
+                        }
                         win(match, otherPlayer);
                         socket.emit('playTurn', {status: "successToSender", numberGiven: number});
                         return
@@ -256,6 +261,11 @@ const ioHandler = (req, res) => {
                       match.turn = {id1: true, id2: true};
                     }
                     else{
+                        if(parseInt(match.currentScore) === parseInt(match.targetScore)-1){
+                          win(match, "draw")
+                          socket.emit('playTurn', {status: "successToSender", numberGiven: number});
+                          return
+                        }
                         win(match, currentPlayer);
                         socket.emit('playTurn', {status: "successToSender", numberGiven: number});
                         return

@@ -222,6 +222,9 @@ useEffect(() => {
           if(data.match.winner == tempId){
               createAlert("You won the game!", "success")
           }
+          else if(data.match.winner == "draw"){
+              createAlert("It's a draw!", "info")
+          }
           else{
               createAlert("You lost the game!", "danger")
           }
@@ -230,6 +233,7 @@ useEffect(() => {
           setTossTime(true)
           setCurrentScore(0)
           setTargetScore(null)
+          setInningsStatus("")
           setOpponentUserNumber(data.match.numberPlayed[tempId == "id1" ? "id2" : "id1"])
           setTimeout(resetGame, 2000)
       })
