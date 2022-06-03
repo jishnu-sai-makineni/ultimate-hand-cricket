@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import io from 'socket.io-client'
 import {Alert} from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import * as gameTypesData from'../public/data/gameTypes.json'
 import * as fs from 'fs'
 import * as path from 'path'
@@ -252,7 +251,7 @@ useEffect(() => {
     return [...Array(size).keys()].map(i => i + startAt);
   }
   return(
-    <div>
+    <div id="main">
     <h1>Invite Link : <input id="invite-link" value={currentUrl} readOnly/><button id="copy" onClick={copyButton}>Copy</button></h1>
 
     {/* <button onClick={() => window.location.href = '/logout'} className="btn btn-danger" style={{position: "fixed", right: "15px", top: "15px"}}>Logout</button> */}
@@ -266,12 +265,12 @@ useEffect(() => {
             <span id="inningsStatus">{inningsStatus}</span>
         </div>
         <div id="oddOReven">
-            <button onClick={() => socket.emit('toss', {status: 'choice', choice: 'odd'})}>ODD</button>
-            <button onClick={() => socket.emit('toss', {status: 'choice', choice: 'even'})}>EVEN</button>
+            <button className='btn btn-outline-dark' onClick={() => socket.emit('toss', {status: 'choice', choice: 'odd'})}>ODD</button>
+            <button className='btn btn-outline-dark' onClick={() => socket.emit('toss', {status: 'choice', choice: 'even'})}>EVEN</button>
         </div>
         <div id="batORbowl" style={{display: "None"}}>
-            <button onClick={ () => socket.emit('toss', {status: 'inningsChoice', choice: 'bat'})}>BAT</button>
-            <button onClick={ () => socket.emit('toss', {status: 'inningsChoice', choice: 'bowl'})}>BOWL</button>
+            <button className='btn btn-outline-dark' onClick={ () => socket.emit('toss', {status: 'inningsChoice', choice: 'bat'})}>BAT</button>
+            <button className='btn btn-outline-dark' onClick={ () => socket.emit('toss', {status: 'inningsChoice', choice: 'bowl'})}>BOWL</button>
         </div>
         <div id="input-tiles-div">
             {gameTypesData[props.gameType].map(number =>
@@ -281,16 +280,20 @@ useEffect(() => {
         </div>
         
         <div>
-            <img id="userImage" src={inningsStatus == "You are batting"?'cricket-bat.svg':'cricket-ball.svg'}></img>
-            <div id="currentUser" className="score-group">
-                <h1>Your number:</h1>
-                <h2 id="currentUserNumber">{currentUserNumber}</h2>
+            <div className="number-div">
+                <img className="statusImage" id="userImage" src={inningsStatus == "You are batting"?'cricket-bat.svg':'cricket-ball.svg'}></img>
+                <div id="currentUser" className="score-group">
+                    Your number:
+                    <h2 id="currentUserNumber">{currentUserNumber}</h2>
+                </div>
             </div>
 
-            <img id="opponentImage" src={inningsStatus != "You are batting"?'cricket-bat.svg':'cricket-ball.svg'}></img>
-            <div id="opponentUser" className="score-group">
-                <h1>Opponent{"'"}s number:</h1>
-                <h2 id="opponentUserNumber">{opponentUserNumber}</h2>
+            <div className='number-div'>
+                <img className="statusImage" id="opponentImage" src={inningsStatus != "You are batting"?'cricket-bat.svg':'cricket-ball.svg'}></img>
+                <div id="opponentUser" className="score-group">
+                    Opponent{"'"}s number:
+                    <h2 id="opponentUserNumber">{opponentUserNumber}</h2>
+                </div>
             </div>
         </div>
     </div>
