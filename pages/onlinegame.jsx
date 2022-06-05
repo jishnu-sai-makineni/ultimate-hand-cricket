@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import io from 'socket.io-client'
 import {Alert} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import * as gameTypesData from'../public/data/gameTypes.json'
 import * as fs from 'fs'
 import * as path from 'path'
@@ -284,7 +285,7 @@ useEffect(() => {
                 <img className="statusImage" id="userImage" src={inningsStatus == "You are batting"?'cricket-bat.svg':'cricket-ball.svg'}></img>
                 <div id="currentUser" className="score-group">
                     Your number:
-                    <h2 id="currentUserNumber">{currentUserNumber}</h2>
+                    <p id="currentUserNumber">{currentUserNumber}</p>
                 </div>
             </div>
 
@@ -292,7 +293,7 @@ useEffect(() => {
                 <img className="statusImage" id="opponentImage" src={inningsStatus != "You are batting"?'cricket-bat.svg':'cricket-ball.svg'}></img>
                 <div id="opponentUser" className="score-group">
                     Opponent{"'"}s number:
-                    <h2 id="opponentUserNumber">{opponentUserNumber}</h2>
+                    <p id="opponentUserNumber">{opponentUserNumber}</p>
                 </div>
             </div>
         </div>
