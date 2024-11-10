@@ -254,7 +254,8 @@ useEffect(() => {
   return(
     <div id="main">
     <h1>Invite Link : <input id="invite-link" value={currentUrl} readOnly/><button id="copy" onClick={copyButton}>Copy</button></h1>
-
+    <br/>
+    <h1>Game ID : {idNumber}</h1>
     {/* <button onClick={() => window.location.href = '/logout'} className="btn btn-danger" style={{position: "fixed", right: "15px", top: "15px"}}>Logout</button> */}
 
     <div id="game-content">
